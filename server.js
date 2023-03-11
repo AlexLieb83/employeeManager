@@ -17,7 +17,7 @@ app.set("view engine", "ejs");
 
 // Home Page
 app.get("/", (req, res) => {
-  res.send("Hi");
+  res.render("index");
 });
 
 app.listen(PORT, () => {
