@@ -17,7 +17,12 @@ app.set("view engine", "ejs");
 
 // Home Page
 app.get("/", (req, res) => {
-  res.render("index");
+  const locals = {
+    title: "Company",
+    description: "Company Employee Management System",
+  };
+
+  res.render("index", { locals });
 });
 
 app.listen(PORT, () => {
